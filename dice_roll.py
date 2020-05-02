@@ -13,15 +13,20 @@ class Dice(object):
 dice_1 = Dice('dice_1')
 dice_2 = Dice('dice_2')
 
-total = dice_1.roll_dice() +  dice_2.roll_dice()
-print(total)
+#total = dice_1.roll_dice() +  dice_2.roll_dice()
+#print(total)
 
-# user = input(f'What is your name ')
-# exit_status = ''
+user = input(f'What is your name ')
+exit_status = ''
 
-# while exit_status is not 'q':
+while exit_status is not 'q':
+    total = dice_1.roll_dice() +  dice_2.roll_dice()
+    if total == 7 or total == 11:
+        print('You are a winner')
+    else:
+        print('You have lost')
     
-#     print(total)
-#     exit_status = input(f'Press any key to continue or')
+    print(total)
+    exit_status = input(f"Press any key to continue or 'q' to quit")
 
 
